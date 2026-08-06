@@ -2,7 +2,7 @@ class AgentBrowser < Formula
   desc "Headless browser automation CLI for AI agents"
   homepage "https://github.com/allwefantasy/agent-browser"
   version "2.0.2"
-  license "MIT"
+  license "Apache-2.0"
 
   on_macos do
     on_arm do
