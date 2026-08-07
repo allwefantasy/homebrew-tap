@@ -1,5 +1,5 @@
 class AgentBrowser < Formula
-  desc "Headless browser automation CLI for AI agents"
+  desc "Headless browser automation CLI for AI agents (portable, embeds Node.js)"
   homepage "https://github.com/allwefantasy/agent-browser"
   version "2.0.2"
   license "Apache-2.0"
@@ -7,16 +7,18 @@ class AgentBrowser < Formula
   on_macos do
     on_arm do
       url "https://github.com/allwefantasy/homebrew-tap/releases/download/agent-browser-v2.0.2/agent-browser-2.0.2-darwin-arm64.zip"
-      sha256 "aef4d3415d4a0d3de232ecdb78ee17e1f600e543f1ee92fb42261bfe427cebb6"
+      sha256 "56e4aba4bb31d56e7c9430ffc1105e2d12b7b5a420c0f7b9443553e12a1c05ef"
     end
     on_intel do
       url "https://github.com/allwefantasy/homebrew-tap/releases/download/agent-browser-v2.0.2/agent-browser-2.0.2-darwin-x64.zip"
-      sha256 "b40e9f6d986c181e51e313000fa1aed98a762ca701cce3bef80913cdd2647fef"
+      sha256 "c7ad3744579e170d74081caaff572eecb43489842835cb7e7b2ebb9e43d44807"
     end
   end
 
   def install
-    bin.install "agent-browser"
+    # Portable tree: launcher + embedded Node + dist + native CLI
+    libexec.install Dir["*"]
+    bin.install_symlink libexec/"agent-browser"
   end
 
   test do
