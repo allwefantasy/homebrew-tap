@@ -5,10 +5,10 @@ cask "pythonmiao" do
   url "https://github.com/allwefantasy/homebrew-tap/releases/download/pythonmiao-v#{version}/PythonMiao-#{version}-arm64.dmg",
       verified: "github.com/allwefantasy/homebrew-tap/"
   name "PythonMiao"
-  desc "Native macOS Auto-Coder desktop client"
+  desc "Native Auto-Coder desktop client"
   homepage "https://gitcode.com/allwefantasy11/winclaw"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
   depends_on arch: :arm64
 
   app "PythonMiao.app"
