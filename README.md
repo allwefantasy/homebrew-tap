@@ -2,6 +2,19 @@
 
 Personal Homebrew tap for tools published by [allwefantasy](https://github.com/allwefantasy).
 
+## PythonMiao
+
+Install the notarized macOS app (Apple Silicon):
+
+```bash
+brew tap allwefantasy/tap
+brew install --cask pythonmiao
+```
+
+The cask installs `PythonMiao.app`. A matching zip is also published on GitCode:
+
+https://gitcode.com/allwefantasy11/winclaw/releases
+
 ## agent-browser
 
 Install:
