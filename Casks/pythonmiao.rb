@@ -8,6 +8,12 @@ cask "pythonmiao" do
   desc "Native Auto-Coder desktop client"
   homepage "https://gitcode.com/allwefantasy11/winclaw"
 
+  livecheck do
+    url :url
+    regex(/^pythonmiao[._-]v?(\d+(?:[.-]\d+)+)$/i)
+    strategy :github_releases
+  end
+
   depends_on macos: :ventura
   depends_on arch: :arm64
 
